@@ -51,19 +51,37 @@ if (score < 0 && score > 100) {
 console.log(" ... ")
 
 
-
+// Данные для авторизации
 const Login = "admin";
 const Password = "12345";
 
-let login = "user";
-let password = "12345";
+// Запрашиваем логин у пользователя
+const innerLogin = prompt("Enter your login");
 
-if (login !== Login) {
-    console.log("Пользователь не найден");
-} else if (password === Password) {
-    console.log("Добро пожаловать!");
+// Проверяем правильность логина
+if (innerLogin === Login) {
+
+    // Если логин правильный, запрашиваем пароль
+    const innerPassword = prompt("Enter your password");
+
+    // Проверяем правильность пароля
+    if (innerPassword === Password) {
+
+        alert("Welcome!");
+        // console.log("Welcome!");
+
+    } else {
+
+        alert("Wrong Password");
+        // console.log("Wrong Password");
+
+    }
+
 } else {
-    console.log("Неверный пароль");
+
+    alert("Wrong Login");
+    // console.log("Wrong Login");
+
 }
 
 console.log(" ... ")
